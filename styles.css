@@ -397,8 +397,12 @@ body {
   backdrop-filter: blur(10px);
   border: 1px solid var(--border-color);
   transition: all 0.3s ease;
+  padding: 10px;
 }
-
+input:focus + label,
+input:not(:placeholder-shown) + label {
+transform: translateY(-30px);
+}
 .contact-form input:focus,
 .contact-form textarea:focus {
   background: rgba(255, 255, 255, 0.1);
@@ -642,7 +646,7 @@ footer {
 /* تنسيق رابط البريد الإلكتروني */
 .contact-info a[href^="mailto:"],
 .footer-links a[href^="mailto:"] {
-  color: #ea4335; /* لون Gmail */
+  color: #25d366; /* لون Gmail */
   position: relative;
   display: inline-flex;
   align-items: center;
